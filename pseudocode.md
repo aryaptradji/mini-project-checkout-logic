@@ -4,12 +4,13 @@
 START
   INPUT price, quantity, member
 
-  IF price is integer
+  IF price is not an integer
     OR price <= 0
-    OR quantity is integer
+    OR quantity is not an integer
     OR quantity <= 0 THEN
     
     OUTPUT "Input tidak valid"
+    STOP
   ENDIF
 
   SET subtotal = price * quantity
